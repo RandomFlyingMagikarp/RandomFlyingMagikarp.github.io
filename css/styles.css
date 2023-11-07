@@ -1,0 +1,58 @@
+html { 
+    scroll-padding-top: 75px; /* Pour éviter que la navbar cache le titre des sections lorsqu'on navigue dans la page. */
+}
+
+body {
+    padding-top: 75px; /* Nécessaire pour que le premier titre ne soit pas caché par la navbar. */
+    padding-bottom: 25px
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 4rem;
+    margin-bottom: 15px;
+}
+
+/*************************** CAROUSEL ***************************/
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);  /* Pour que les flèches du carousel soient noires. */
+}
+
+.carousel-caption {
+    position: relative;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.carousel-item{
+    width: 100%;
+    height: 750px; 
+    overflow: hidden;
+}
+.carousel-item img{
+    width: 100%;
+    height: 75%;  /* Pour éviter d'avoir du texte sur l'image. */
+    object-fit: cover;
+}
+
+/*************************** MEDIA QUERIES ***************************/
+
+/* Pour que le texte du carousel ne soit pas trop grand sur mobile. */
+@media only screen and (max-width: 417px) {
+    #carouselProjets p {
+        font-size: 0.6rem;
+    }
+}
+
+/* Pour que le texte du carousel ne soit pas trop grand sur mobile/tablette. */
+@media only screen and (max-width: 768px) and (min-width: 418px) {
+    #carouselProjets p {
+        font-size: 0.75rem;
+    }
+}
