@@ -21,18 +21,24 @@
 
 <!---------------------- BODY ---------------------->
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#barreNavigation">
   <!-- NAV -->
   <!-- La navbar va floater au sommet de l'écran en tout temps. -->
+  <!-- Sur les plus petites écrans, un hamburger menu apparaît avec les liens de navigation. -->
   <nav class="navbar navbar-expand-lg bg-primary fixed-top" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Mon portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barreNavigation"
-        aria-controls="barreNavigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="barreNavigation">
-        <ul class="navbar-nav me-auto">
+      <div class="d-flex flex-grow-1">
+        <span class="w-100 d-lg-none d-block">
+          <!-- hidden spacer to center brand on mobile --></span>
+        <a class="navbar-brand flex-grow-1" href="#"> Mon portfolio </a>
+        <div class="w-100 text-right">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barreNavigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse flex-grow-1 text-right" id="barreNavigation">
+        <ul class="navbar-nav ms-auto flex-nowrap">
           <li class="nav-item active">
             <a class="nav-link" href="#introduction">Introduction</a>
           </li>
@@ -56,7 +62,7 @@
 
   <!-- MAIN -->
   <!-- Implémentation d'un scrollspy pour que la barre de navigation puisse se mettre à jour dynamiquement. -->
-  <main data-bs-spy="scroll" data-bs-target="#barreNavigation">
+  <main>
 
     <!-- Section 1: Accueil/Introduction  -->
     <div class="container pt-4" id="introduction">

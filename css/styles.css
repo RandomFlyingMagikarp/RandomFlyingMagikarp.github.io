@@ -1,5 +1,5 @@
 html { 
-    scroll-padding-top: 75px; /* Pour éviter que la navbar cache le titre des sections lorsqu'on navigue dans la page. */
+    scroll-padding-top: 90px; /* Pour éviter que la navbar cache le titre des sections lorsqu'on navigue à l'aide de celle-ci. */
 }
 
 body {
